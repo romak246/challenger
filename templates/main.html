@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+{% block appname %}
+<h1 align="right"><span style="font-size: medium;font-weight: normal; color: black;
+    font-family: Tahoma,serif;">  <a href="/register">Регистрация</a></span> </h1>
+<h1 align="center"><span style="font-size: larger;font-weight: normal; color: black;
+    font-family: Tahoma,serif;"> Челленджер - задача будет выполнена! </span> </h1>
+{% endblock appname %}
+
+<html>
+<head>
+    <title>Challenger app</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h2>
+          {% for i in challenges %}
+           <p>
+               <span style="font-size: medium;font-weight: normal; color: black; font-family: Tahoma,serif;">
+               <a href="/challenge/{{i.id}}">
+                   Челлендж: {{ i.title }}</a><br>
+                   Что нужно сделать: {{ i.description }}<br>
+                   Награда: {{i.reward}}</span><br>
+           </p>
+          {% endfor %}
+    </h2>
+<button onclick="window.location.href = 'create_challenge';">Добавить челлендж</button>
+</body>
+</html>

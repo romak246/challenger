@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+{% block appname %}
+
+<h1 align="center"><span style="font-size: larger;font-weight: normal; color: black;
+    font-family: Tahoma,serif;"> Челленджер - задача будет выполнена! </span> </h1>
+{% endblock appname %}
+
+
+<head>
+    <title>Challenger app</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+
+
+
+
+    <form action="new_challenge" method="post">
+        <table>
+                    {% csrf_token %}
+            <tr>
+                <td>Название:</td>
+                <td><input type="text" name="title"/></td>
+            </tr>
+            <tr>
+                <td>Награда:</td>
+                <td><input type="number" name="reward"/></td>
+            </tr>
+                  <tr>
+                <td>Описание:</td>
+                <td><input type="text" name="description"/></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                <input type="submit"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>

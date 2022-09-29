@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+{% block appname %}
+
+<h1 align="center"><span style="font-size: larger;font-weight: normal; color: black;
+    font-family: Tahoma,serif;"> Челленджер - задача будет выполнена! </span> </h1>
+{% endblock appname %}
+
+
+<html>
+<head>
+    <title>Challenger app</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h2>
+
+           <p><span style="font-size: large;font-weight: normal; color: black; font-family: Tahoma;">
+
+                   Челлендж: {{ title }}<br>
+                    создан: {{date}}<br>
+                   Описание:<br> {{ description }}<br>
+                   Награда: {{reward}}</span><br></p>
+
+    </h2>
+</body>
+</html>
